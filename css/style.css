@@ -93,7 +93,6 @@ a{
     display: flex;
     width: 80%;
     justify-content: flex-end;
-    /* position: relative; */
 }
 .nav-area .links{
     display: flex;
@@ -141,7 +140,7 @@ a{
     position: fixed;
     width: 40px;
     height: 40px;
-    right: 15px;
+    right: 5px;
     bottom: 15px;
     border-radius: 10px;
     background-color: white;
@@ -191,10 +190,16 @@ a{
 }
 .section-text h1{
     font-size: 60px;
+    position: relative;
+    left: -800px;
+    transition: 0.9s;
 }
 .section-text p{
     color: #d2d2d2;
     font-size: 24px;
+    position: relative;
+    left: -800px;
+    transition: 1.5s;
 }
 @media (max-width: 767px) {
     .section-text h1{
@@ -281,10 +286,18 @@ a{
     padding: 5px;
     display: flex;
     justify-content: space-between;
+    overflow: hidden;
 }
 .about-us .img-cont{
     width: 50%;
 }
+@media (min-width: 992px) {
+    .about-us .img-cont{
+        position: relative;
+        left: -700px;
+        transition: 1s;
+    }
+} 
 .about-us .img-cont img{
     display: block;
     width: 100%;
@@ -295,6 +308,13 @@ a{
     width: 48%;
     text-align: start;
 }
+@media (min-width: 992px) {
+    .about-us .text-cont{
+        position: relative;
+        right: -700px;
+        transition: 1s;
+    }
+} 
 .text-cont p:first-child{
     font-size: 22px;
     font-weight: bold;
@@ -330,12 +350,19 @@ a{
     padding: 5px;
     display: flex;
     justify-content: space-between;
+    overflow: hidden;
 }
 
 .offers .img-cont{
     width: 60%;
-
 }
+@media (min-width: 992px) {
+    .offers .img-cont{
+        position: relative;
+        left: -700px;
+        transition: 1s;
+    }
+} 
 .offers .img-cont img{
     display: block;
     width: 100%;
@@ -346,6 +373,13 @@ a{
     text-align: start;
     padding: 10px;
 }
+@media (min-width: 992px) {
+    .offers .text-cont{
+        position: relative;
+        right: -700px;
+        transition: 1s;
+    }
+} 
 .offers .text-cont p:first-child{
     font-size: 25px;
 }
