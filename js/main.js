@@ -55,3 +55,45 @@ function scrollToSections (element){
     });
 };
 scrollToSections(allLinks);
+
+//......
+let hederText = document.querySelector('.section-text h1');
+let hederP = document.querySelector('.section-text p');
+
+window.onload = function(){
+    hederText.style.left = '0';
+    hederP.style.left = '0';
+};
+
+let aboutImg = document.querySelector('.about-us .img-cont');
+let aboutText = document.querySelector('.about-us .text-cont');
+let offerImg = document.querySelector('.offers .img-cont');
+let offerText = document.querySelector('.offers .text-cont');
+
+
+window.addEventListener('scroll', ()=> {
+        // console.log(document.documentElement.scrollTop);
+        if (this.document.documentElement.scrollTop >= 210){
+            aboutImg.style.left = '0';
+            aboutText.style.right = '0';
+        }else{
+            aboutImg.style.left = '-700px';
+            aboutText.style.right = '-700px';
+        };
+        if(this.document.documentElement.scrollTop >= 1065){
+            aboutImg.style.left = '-700px';
+            aboutText.style.right = '-700px';
+        };
+
+        if (this.document.documentElement.scrollTop >= 890){
+            offerImg.style.left = '0';
+            offerText.style.right = '0';
+        }else{
+            offerImg.style.left = '-700px';
+            offerText.style.right = '-700px';
+        };
+        if(this.document.documentElement.scrollTop >= 1645){
+            offerImg.style.left = '-700px';
+            offerText.style.right = '-700px';
+        }
+});
