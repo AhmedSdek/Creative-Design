@@ -27,6 +27,79 @@ a{
     height: 2px;
     background-color: var(--main-color);
 }
+.setting-box{
+    position: fixed;
+    height: 100vh;
+    width: 300px;
+    background-color: rgb(237, 237, 237);
+    z-index: 15;
+    padding: 55px 20px;
+    left: -300px;
+    transition: 0.4s;
+    border-right: 1px solid #454545;
+    /* box-shadow: 8px 5px 20px; */
+}
+.setting-box.open{
+    left: 0;
+}
+.setting-box h3{
+    margin-top: 20px;
+    color: #ec1c23;
+    font-weight: bold;
+    position: relative;
+    text-align: center;
+}
+.setting-box h3::before{
+    content: "";
+    width: 100%;
+    position: absolute;
+    height: 2px;
+    bottom: -15px;
+    left: 0;
+    background-color: #ec1c23;
+}
+.setting-box .setting{
+    position: absolute;
+    right: -35px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 0 10px 10px 0 ;
+}
+.setting-box .setting i{
+    cursor: pointer;
+}
+.setting-box .mood{
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.setting-box h4{
+    font-size: 18px;
+    padding-bottom: 20px;
+    font-weight: bold;
+    color: #08526d;
+}
+.setting-box .left{
+    width: 40%;
+    text-align: center;
+    flex-direction: column;
+}
+.setting-box .right{
+    width: 40%;
+    text-align: center;
+    flex-direction: column;
+
+}
+.setting-box i{
+    font-size: 25px;
+}
+.fa-moon:before {
+    content: "\f186";
+    cursor: pointer;
+}
+.setting-box i.dark{
+    opacity: 0.5;
+}
 /* @media (min-width: 576px) {
     .container{
         max-width: 540px;
@@ -320,7 +393,7 @@ a{
     font-weight: bold;
     color: var(--second-color);
 }
-.text-cont p{
+.text-cont .about-p{
     font-weight: bold;
 }
 @media (max-width: 991px) {
