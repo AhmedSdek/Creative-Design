@@ -1,3 +1,4 @@
+
 let btn = document.querySelector('.toggle-menu');
 let menu = document.querySelector('.links');
 
@@ -97,3 +98,112 @@ window.addEventListener('scroll', ()=> {
             offerText.style.right = '-700px';
         }
 });
+
+let settingBtn = document.querySelector('.setting-box .setting i');
+let settingBox = document.querySelector('.setting-box')
+settingBtn.addEventListener('click', function(){
+    settingBox.classList.toggle('open');
+    settingBtn.classList.toggle('fa-spin');
+
+});
+
+let light = document.querySelector('.left .light');
+let dark = document.querySelector('.right .dark');
+let nav = document.querySelector('.nav-section');
+let setting = document.querySelector('.setting-box .setting');
+let about = document.querySelector('.about-us');
+let pargraph = document.querySelector('.text-cont .about-p');
+let contact = document.querySelector('.contact');
+let offerP = document.querySelector('.opffer-p');
+let offerp2 = document.querySelector('.opffer-p2');
+let contactLeft = document.querySelector('.contact-cont .left h3');
+let contacRight = document.querySelector('.contact-cont .right h3');
+let li = document.querySelectorAll('.contact-cont i');
+
+
+light.addEventListener('click', function(){
+        light.style.opacity='1';
+    dark.style.opacity = '0.4';
+    nav.style.backgroundColor = 'white';
+    settingBox.style.backgroundColor = 'white';
+    settingBox.style.color = 'black';
+    setting.style.backgroundColor = 'white';
+    about.style.backgroundColor= '#eee';
+    document.body.style.backgroundColor= 'white';
+    contact.style.backgroundColor= 'white';
+    offerP.style.color= 'black';
+    offerp2.style.color= 'black';
+    pargraph.style.color= 'black';
+    contactLeft.style.color= 'black';
+    contacRight.style.color= 'black';
+    for (var i = 0; i < li.length; i++){
+        li[i].style.color='black'
+    };
+    
+// set localstoreg
+localStorage.removeItem('dark');
+localStorage.setItem('light', 'white');
+});
+dark.addEventListener('click', function(){
+    dark.style.opacity='1';
+    light.style.opacity = '0.4';
+    nav.style.backgroundColor = 'black';
+    settingBox.style.backgroundColor = 'black';
+    settingBox.style.color = 'white';
+    setting.style.backgroundColor = 'black';
+    document.body.style.backgroundColor= 'black';
+    about.style.backgroundColor= 'black';
+    pargraph.style.color= 'white';
+    contact.style.backgroundColor= 'black';
+    offerP.style.color= 'white';
+    offerp2.style.color= 'white';
+    contactLeft.style.color= 'white';
+    contacRight.style.color= 'white';
+    for (var i = 0; i < li.length; i++){
+        li[i].style.color='white'
+    };
+
+    // set localstoreg
+    localStorage.removeItem('light');
+localStorage.setItem('dark', 'black');
+});
+console.log(localStorage);
+
+if (localStorage.getItem('dark') === "black"){
+
+    dark.style.opacity='1';
+    light.style.opacity = '0.4';
+    nav.style.backgroundColor = 'black';
+    settingBox.style.backgroundColor = 'black';
+    settingBox.style.color = 'white';
+    setting.style.backgroundColor = 'black';
+    document.body.style.backgroundColor= 'black';
+    about.style.backgroundColor= 'black';
+    pargraph.style.color= 'white';
+    contact.style.backgroundColor= 'black';
+    offerP.style.color= 'white';
+    offerp2.style.color= 'white';
+    contactLeft.style.color= 'white';
+    contacRight.style.color= 'white';
+    for (var i = 0; i < li.length; i++){
+        li[i].style.color='white'
+    };
+}else{
+    light.style.opacity='1';
+    dark.style.opacity = '0.4';
+    nav.style.backgroundColor = 'white';
+    settingBox.style.backgroundColor = 'white';
+    settingBox.style.color = 'black';
+    setting.style.backgroundColor = 'white';
+    about.style.backgroundColor= '#eee';
+    document.body.style.backgroundColor= 'white';
+    contact.style.backgroundColor= 'white';
+    offerP.style.color= 'black';
+    offerp2.style.color= 'black';
+    pargraph.style.color= 'black';
+    contactLeft.style.color= 'black';
+    contacRight.style.color= 'black';
+    for (var i = 0; i < li.length; i++){
+        li[i].style.color='black'
+    };
+}
