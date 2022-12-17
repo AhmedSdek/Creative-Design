@@ -138,6 +138,7 @@ a{
     align-items: center;
     display: block;
     font-size: 35px;
+        font-family: 'Pacifico', cursive;
 }
 
 .nav-area i{
